@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,19 +8,71 @@
 
     <!-- CHAMADA DA MEDIA QUERY AND FEATURE -->
 
-    <link rel="stylesheet" href="assets/css/generalstyle.css" media="all" >
+    <!-- <link rel="stylesheet" href="assets/css/generalstyle.css" media="all" >
 
     <link rel="stylesheet" href="assets/css/styleretrato.css" media="screen and (orientation:portrait)" >
 
-    <link rel="stylesheet" href="assets/css/stylepaisagem.css" media="screen and (orientation:landscape)">
+    <link rel="stylesheet" href="assets/css/stylepaisagem.css" media="screen and (orientation:landscape)"> -->
 
-   
-<!-- ----------------------------------------- -->
+
+    <!-- ----------------------------------------- -->
+
+    <style>
+        /* query gerais */
+        
+         @media all {
+            :root {
+            --corGeral: #233eff;
+            --corsombraText: #1526a7;
+        }
+        
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        html,
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: var(--corGeral);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        
+        h1,
+        h2 {
+            color: white;
+            text-align: center;
+            text-shadow: 2px 2px 0px var(--corsombraText);
+            padding: 10px;
+        }
+         }
+        /* query screen retrato */
+        
+        @media screen and (orientation:portrait) {
+            body {
+                background-image: url(./assets/img/cev-portrait.jpg);
+                background-position: center bottom;
+            }
+        }
+        /* query screen paisagem */
+        
+        @media screen and (orientation:landscape) {
+            body {
+                background-image: url(./assets/img/cev-landscape.jpg);
+                background-position: left bottom;
+            }
+        }
+    </style>
 
     <title>Media Query and Feature</title>
 </head>
+
 <body>
     <h1>Media Query and Feature</h1>
     <h2>Mudando orientação da Tela</h2>
 </body>
+
 </html>
